@@ -1,0 +1,468 @@
+
+
+* {
+	box-sizing: border-box;
+	transition: all ease-in-out 250ms;
+}
+
+body {
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	text-align: center;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+	width: 95%;
+	max-width: 70em;
+	margin: 0 auto;
+}
+
+.clearfix::after,
+section::after,
+footer::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/*column system
+=================================*/
+
+[class^=col-] {
+	width: 100%;
+	margin-top: 1em;
+}
+[class^=col-]:first-child {
+	margin-top: 0;
+}
+.col-1 {
+	width: 33.333334%;
+	float: left;
+}
+
+@media (min-width: 40rem) {
+	
+	[class^=col-] {
+		float: left;
+		padding: 0 .5em;
+		margin-top: 0;
+	}
+
+
+	[class^=col-]:first-child {
+		padding-left: 0;
+	}
+	[class^=col-]:last-child {
+		padding-right: 0;
+	}
+	.col-3 {
+		width: 50%;
+	}
+
+	.col-1 {
+		width: 16.6666%;
+	}
+}
+
+
+
+
+
+/*typography
+=================================*/
+
+h1 {
+	font-weight: 300;
+	font-size: 1.7rem;
+	margin-top: 0;
+}
+p {
+	margin-top: 0;
+	line-height: 1.3;
+}
+p:last-of-type {
+	margin-bottom: 0;
+}
+.title {
+	font-size: 1.5rem;
+	color: #EAEAEA;
+	margin-bottom: 1.5em;
+	font-weight: 900;
+	margin-top: 1em;
+}
+.title-cta {
+	font-size: 2.5rem;
+	margin-bottom: 1.5em;
+	font-weight: 900;
+	margin: 0 0 .5em;
+}
+.title-cta span {
+	font-weight: 300;
+	display: block;
+	font-size: .9em;
+}
+.unstyled-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+@media (min-width: 60rem) {
+	p {
+		font-size: 1.2rem;
+		line-height: 1.3;
+	}
+	.title {
+	font-size: 1.8rem;
+	}
+/*	.title:hover {
+	transition: all .2s;
+	transform: skewY(1deg) skewX(10deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+	}*/
+}
+
+
+
+
+/*buttons*/
+
+.button {
+	display: inline-block;
+	font-size: 1.15rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-width: 2px;
+	border-style: solid;
+	padding: .25em 1.75em;
+}
+
+@media (min-width: 60rem) {
+	.button {
+		font-size: 1.5rem;
+	}
+}
+
+.button-small {
+	font-size: .7rem;
+	font-weight: 700;
+}
+
+.button-accent {
+	color: #AD974F;
+	border-color: #AD974F;
+}
+
+.button-accent:hover,
+.button-accent:focus {
+	background: #EAEAEA;
+}
+
+
+
+
+/*header
+=================================*/
+
+header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 1em;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+	margin: 1em;
+}
+
+nav a {
+	font-weight: 900;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: .8rem;
+	padding: .5em;
+	color: white;
+}
+
+nav a:hover,
+nav a:focus {
+	color: #DDD;
+}
+
+@media (min-width: 60rem) {
+	.logo {
+		float: left;
+	}
+	nav {
+		float: right;
+	}
+}
+@media (min-width: 320px) {
+	nav a {
+		font-size: .7rem;
+		padding: .25em;
+	}
+}
+
+
+/*home-hero
+=================================*/
+
+.home-hero {
+	background-image: url(images/model6.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 10em 0;
+}
+
+@media (min-width: 60rem) {
+	.home-hero {
+		height: 100vh;
+		padding-top: 54vh;
+	}
+}
+
+/*hero-home
+=================================*/
+
+.home-about-textbox {
+	background-color: #231F20;
+	padding: 4em;
+	width: 100vw;
+	margin-left: -2.6%;
+	outline: 2px solid #AD974F;
+	outline-offset: -2.5em;
+	color: white;
+	position: relative;
+}
+
+.home-about-textbox h1 {
+	color: #AD974F;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: .95em; 
+	background: #231F20;
+	padding: 0 .25em;
+}
+
+
+
+
+
+@media (min-width: 25rem) {
+	h1 {
+		font-size: 2rem;
+	}
+	.home-about-textbox h1 {
+		top: .65em;
+		padding: 0 .325em;
+	}
+}
+
+@media (min-width: 60rem) {
+	h1 {
+		font-size: 2.5rem;
+	}
+	.home-about {
+	background-image: url(images/suit-colors.jpg);
+	background-repeat: no-repeat;
+	padding-bottom: 10em;
+	}
+	.home-about-textbox {
+	width: 50%;
+	padding: 7em;
+	outline-offset: -3.75em;
+	margin-left: -2.5%;
+	top: -5em;
+	text-align: left;
+	box-shadow: 0 0 4em 0 rgba(0,0,0,.3);
+	}
+	.home-about-textbox h1 {
+		top: .9em;
+		left: 6rem;
+		transform: translateX(0);
+	}
+}
+
+
+/*portfolio
+=================================*/
+
+
+
+.portfolio {
+	margin: 3em 0 0;
+}
+
+.clothes-item {
+	margin: 0;
+	position: relative;
+}
+
+.clothes-item img {
+	display: block;
+}
+
+.clothes-desc {
+	position: absolute;
+	z-index: 100;
+	bottom: 0em;
+	left: 0em;
+	right: 0em;
+	color: white;
+	background: rgba(0,0,0,.6);
+	padding-bottom: 1em;
+}
+
+.clothes-desc p {
+	margin: 1em;
+}
+
+@media (min-width: 37rem) {
+	.clothes-item {
+		width: 50%;
+		float: left;
+	}	
+}
+
+@media (min-width: 60rem) {
+	.clothes-item {
+		width: 50%;
+		overflow: hidden;
+	}
+	.clothes-desc {
+		transform: translateY(150%);
+	}	
+	.clothes-item:hover .clothes-desc {
+		transform: translateY(0%);
+	}
+}
+
+/*cta
+=================================*/
+
+.cta {
+	background-color: #231F20;
+	padding: 6em 0;
+}
+
+
+/*contact
+=================================*/
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+.brand {
+	text-align: center;
+}
+.wrapper > *{
+	padding: 1em;
+}
+.company-info {
+	background: #8E793E;
+}
+.company-info h1, .company-info ul {
+	text-align: center;
+	margin: 0 0 1rem 0;
+}
+.contact {
+	background: #231F20;
+}
+
+/*form styles
+=================================*/
+
+.contact form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	color: #EAEAEA;
+}
+.contact form label {
+	display: block;
+}
+.contact form p {
+	margin: 0;
+}
+.contact form .full {
+	grid-column: 1 / 3;
+}
+.contact form button, .contact form input, .contact form textarea {
+	width: 100%;
+	padding: 1em;
+}
+.contact form button {
+	background: none;
+    color: #AD974F;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    font-size: 1.15rem;
+    border-width: 2px;
+	border-style: solid;
+	padding: .25em 1.75em;
+}
+.contact h3 {
+	color: #EAEAEA;
+}
+.company-info h1 {
+	line-height: 1.2;
+}
+.company-info ul {
+	line-height: 1.6;
+}
+.alert {
+	padding: 10px;
+	background: #AD974F;
+	color: #231F20;
+	margin-bottom: 10px;
+	display: none;
+}
+
+
+@media (min-width: 700px) {
+	.wrapper {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+	}
+	.wrapper > *{
+		padding: 2em;
+	}
+	.company-info h1, .company-info ul, .brand{
+		text-align: left;
+	}
+}
+
+
+
+
+
+
+
+/*footer
+=================================*/
+
+footer {
+	background: #EAEAEA;
+	color: #231F20;
+	text-align: left;
+	padding: 5em 0;
+}
