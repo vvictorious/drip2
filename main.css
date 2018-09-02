@@ -2,8 +2,8 @@
 
 * {
 	box-sizing: border-box;
-	transition: all ease-in-out 250ms;
-}
+/*	transition: all ease-in-out 250ms;
+*/}
 
 body {
 	margin: 0;
@@ -325,6 +325,7 @@ nav a:focus {
 	color: white;
 	background: rgba(0,0,0,.6);
 	padding-bottom: 1em;
+	transition: all ease-in-out 250ms;
 }
 
 .clothes-desc p {
